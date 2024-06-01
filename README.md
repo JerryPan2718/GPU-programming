@@ -1,5 +1,6 @@
 # GPU Programming Learning Notes
 ## [GPU Optimization Workshop](https://www.youtube.com/watch?v=v_q2JTIqE20)
+### Pytorch
 1. Kernel confusion: Point-wise operations like sin(sin(sin(x))), relu(x) is memory-bound, so we should do kernel fusion, e.g. with torch.compile().
 - torch.compile is a fusion compiler.
 - Triton compiles with tmp var to show the kerel fusion.
@@ -12,7 +13,7 @@
 - Compilers generally perform fusion, but optimizations reqire math rewriting of the same expr, which is generally harder.
 5. Custom kernel
 
-- TensorRT-LLM
+### TensorRT-LLM
 1. Phases of LLM request
 - 2 phases - prefill and generate
   - Prefill: process the prompt, generate the first token, and initialize the KV cache.
@@ -25,12 +26,12 @@
 4. Speculative decoding
 - Guess tokens n, n+1, and n+2 while generating seq[n].
 
-- Triton
-  - Graph compiler <- CUDA <- Triton
- 
-- Scaling data process from CPU to distributed GPUs
-  - OLTP is not GPU friendly.
-  - OLAP is SIMD/GPU friendly.
-  - Apache Arrow: columnar format + language-agnostic + CPU/GPU + zero-copy
- 
+### Triton
+- Graph compiler <- CUDA <- Triton
+
+### Scaling data process from CPU to distributed GPUs
+- OLTP is not GPU friendly.
+- OLAP is SIMD/GPU friendly.
+- Apache Arrow: columnar format + language-agnostic + CPU/GPU + zero-copy
   
+<img width="899" alt="Screenshot 2024-06-01 at 12 20 40 AM" src="https://github.com/JerryPan2718/GPU-programming/assets/37657480/77559b30-d275-4ab0-aa6d-f272de1d3f2a">
