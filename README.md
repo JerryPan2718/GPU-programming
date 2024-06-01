@@ -29,3 +29,8 @@
   - Graph compiler <- CUDA <- Triton
  
 - Scaling data process from CPU to distributed GPUs
+  - OLTP is not GPU friendly.
+  - OLAP is SIMD/GPU friendly.
+  - Apache Arrow: columnar format + language-agnostic + CPU/GPU + zero-copy
+ 
+  
