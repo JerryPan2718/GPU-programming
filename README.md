@@ -17,3 +17,5 @@
 - 2 phases - prefill and generate
   - Prefill: process the prompt, generate the first token, and initialize the KV cache.
   - Generate: from prior state (KV cache), and last generated token, generate next token, and update KV cache.
+2. Token concatenation
+- <img width="1345" alt="Screenshot 2024-05-31 at 10 38 21 PM" src="https://github.com/JerryPan2718/GPU-programming/assets/37657480/5b8531e5-a8ac-4bdd-8fa5-39cc0627ad74">
